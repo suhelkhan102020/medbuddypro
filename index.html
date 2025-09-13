@@ -103,35 +103,55 @@
 
   <script>
     // Sample posts stored as JavaScript objects. To add a new article, add an object here.
-    const posts = [
-      {
-        id: 'pregnancy-1',
-        title: 'Pregnancy Nutrition: What to Eat in Each Trimester',
-        tag: 'Pregnancy',
-        date: 'September 10, 2025',
-        excerpt: 'A trimester-wise guide to nutrition — calories, important vitamins, and sample meal ideas for expectant mothers.',
-        image: 'images/pregnancy-nutrition.jpg',
-        content: `<h2>Pregnancy Nutrition — Trimester wise</h2><p>Good nutrition supports both mother and baby. In the first trimester focus on folate-rich foods, in the second increase calories moderately, and in the third focus on iron and protein.</p><h3>Sample meals</h3><ul><li>Breakfast: Oats with milk and fruit</li><li>Lunch: Dal, rice, salad, and a piece of grilled fish/roti</li><li>Snacks: Nuts and yogurt</li></ul>`
-      },
-      {
-        id: 'baby-1',
-        title: 'Newborn Care: First 30 Days Checklist',
-        tag: 'Baby',
-        date: 'August 24, 2025',
-        excerpt: 'Essential checklist for baby care in the first month — feeding, vaccination, hygiene, and sleep tips.',
-        image: 'images/newborn-checklist.jpg',
-        content: `<h2>Newborn care — first month</h2><p>Important tips on feeding, bathing, vaccinations, and when to call the doctor. Keep a simple checklist for daily care.</p>`
-      },
-      {
-        id: 'med-1',
-        title: 'Common Medicine Safety Tips for Parents',
-        tag: 'Medicine',
-        date: 'July 05, 2025',
-        excerpt: 'How to store medicines, read labels, and dose safely for children and pregnant mothers.',
-        image: 'images/medicine-safety.jpg',
-        content: `<h2>Medicine safety basics</h2><p>Always check dosage by weight, never give adult tablets to children without advice, and keep medicines locked away.</p>`
-      }
-    ];
+    
+const posts = [
+  {
+    id: 'pregnancy-1',
+    title: 'Pregnancy Care & Nutrition',
+    tag: 'Pregnancy',
+    date: 'September 10, 2025',
+    excerpt: 'Essential guide for expecting mothers about diet, exercise, and health checklists.',
+    image: 'images/pregnancy.jpg',
+    content: `<h2>Pregnancy Care</h2><p>Pregnancy requires balanced nutrition, regular checkups, and emotional support.</p>`
+  },
+  {
+    id: 'baby-1',
+    title: 'Newborn Care: First 30 Days',
+    tag: 'Baby',
+    date: 'August 24, 2025',
+    excerpt: 'Checklist for feeding, sleeping, hygiene, and vaccination in the first month.',
+    image: 'images/newborn.jpg',
+    content: `<h2>Newborn Care</h2><p>Breastfeeding, hygiene, vaccination schedules, and safe sleep practices.</p>`
+  },
+  {
+    id: 'disease-1',
+    title: 'Common Diseases in Infants',
+    tag: 'Disease',
+    date: 'August 15, 2025',
+    excerpt: 'Fever, cold, colic, and other common newborn diseases explained with care tips.',
+    image: 'images/disease.jpg',
+    content: `<h2>Common Diseases</h2><p>Learn about symptoms, prevention, and when to consult a doctor.</p>`
+  },
+  {
+    id: 'health-diet-1',
+    title: 'Health & Diet Essentials',
+    tag: 'Health & Diet',
+    date: 'August 05, 2025',
+    excerpt: 'Diet tips for mothers and babies — balanced meals, hydration, and nutrition.',
+    image: 'images/health-diet.jpg',
+    content: `<h2>Health & Diet</h2><p>Focus on proteins, vitamins, and hydration to stay healthy during motherhood.</p>`
+  },
+  {
+    id: 'med-1',
+    title: 'Medicine Safety Tips',
+    tag: 'Medicine',
+    date: 'July 05, 2025',
+    excerpt: 'Safe storage, dosage, and precautions for medicines in pregnancy and newborns.',
+    image: 'images/medicine.jpg',
+    content: `<h2>Medicine Safety</h2><p>Keep medicines locked away, never self-medicate during pregnancy, and always check dosage.</p>`
+  }
+];
+
 
     const postsContainer = document.getElementById('posts');
     const searchInput = document.getElementById('search');
