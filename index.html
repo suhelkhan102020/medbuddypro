@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MedBuddyPro Posts</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f8fc;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .post {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+    .post img {
+      width: 100%;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+    .post h2 {
+      color: #34495e;
+      margin-bottom: 5px;
+    }
+    .post p {
+      color: #555;
+      line-height: 1.6;
+    }
+    .meta {
+      font-size: 0.9em;
+      color: #888;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>MedBuddyPro Posts</h1>
+  <div id="posts-container"></div>
+
+  <script>
+    const posts = [
+      {
+        id: 'pregnancy-1',
+        title: 'Pregnancy Care & Nutrition',
+        tag: 'Pregnancy',
+        date: 'September 10, 2025',
+        excerpt: 'Essential guide for expecting mothers about diet, exercise, and health checklists.',
+        image: 'images/pregnancy-care.jpg',
+        content: `<h2>Pregnancy Care</h2><p>Pregnancy requires balanced nutrition, regular checkups, and emotional support.</p>`
+      },
+      {
+        id: 'baby-1',
+        title: 'Newborn Care: First 30 Days',
+        tag: 'Baby',
+        date: 'August 24, 2025',
+        excerpt: 'Checklist for feeding, sleeping, hygiene, and vaccination in the first month.',
+        image: 'images/newborn-care.jpg',
+        content: `<h2>Newborn Care</h2><p>Breastfeeding, hygiene, vaccination schedules, and safe sleep practices.</p>`
+      },
+      {
+        id: 'disease-1',
+        title: 'Common Diseases in Infants',
+        tag: 'Disease',
+        date: 'August 15, 2025',
+        excerpt: 'Fever, cold, colic, and other common newborn diseases explained with care tips.',
+        image: 'images/infant-diseases.jpg',
+        content: `<h2>Common Diseases</h2><p>Learn about symptoms, prevention, and when to consult a doctor.</p>`
+      },
+      {
+        id: 'health-diet-1',
+        title: 'Health & Diet Essentials',
+        tag: 'Health & Diet',
+        date: 'August 05, 2025',
+        excerpt: 'Diet tips for mothers and babies — balanced meals, hydration, and nutrition.',
+        image: 'images/health-diet.jpg',
+        content: `<h2>Health & Diet</h2><p>Focus on proteins, vitamins, and hydration to stay healthy during motherhood.</p>`
+      },
+      {
+        id: 'med-1',
+        title: 'Medicine Safety Tips',
+        tag: 'Medicine',
+        date: 'July 05, 2025',
+        excerpt: 'Safe storage, dosage, and precautions for medicines in pregnancy and newborns.',
+        image: 'images/medicine-safety.jpg',
+        content: `<h2>Medicine Safety</h2><p>Keep medicines locked away, never self-medicate during pregnancy, and always check dosage.</p>`
+      }
+    ];
+
+    const container = document.getElementById('posts-container');
+    posts.forEach(post => {
+      const div = document.createElement('div');
+      div.className = 'post';
+      div.innerHTML = `
+        <h2>${post.title}</h2>
+        <div class="meta">${post.date} | ${post.tag}</div>
+        <img src="${post.image}" alt="${post.title}">
+        <p>${post.excerpt}</p>
+        ${post.content}
+      `;
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>
